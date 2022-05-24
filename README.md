@@ -36,6 +36,7 @@ ggqqplot(residuals(modeldatakulabio))
 plot(modeldatakulabio, 1)
 leveneTest(Total.grain.wt.pot ~ Treatment.ID, data=datakulabio)
 
+#one way anova and random effect 
 fit<-lmer(MC..lb.acre..12.. ~ Variety + (1|Year), data=redata2021)
 anova(fit)
 require(multcompView)
